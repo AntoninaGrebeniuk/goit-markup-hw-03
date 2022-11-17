@@ -8,6 +8,7 @@
   --focus-btn-color: #188ce8;
   --background-color: #2f303a;
   --light-background-color: #f5f4fa;
+  --header-border: #ececec;
 }
 
 body {
@@ -21,7 +22,6 @@ body {
   margin: 0 auto;
 
   width: 1200px;
-  outline: 2px solid lime;
 }
 h1,
 h2,
@@ -44,6 +44,12 @@ ul {
 
 .link {
   text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
@@ -75,6 +81,9 @@ ul {
 /* герой,футер background: #2F303A; */
 
 /* -----Шапка сайта----- */
+.header {
+  border-bottom: 1px solid #ececec;
+}
 
 .logo {
   font-family: 'Raleway', sans-serif;
@@ -91,7 +100,28 @@ ul {
 
 /* -----Навигация----- */
 
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  margin-left: 93px;
+}
+
+.site-nav {
+  display: flex;
+}
+
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -111,7 +141,20 @@ ul {
 
 /* ------Контакты------ */
 
+.contact.list {
+  display: flex;
+  margin-left: auto;
+}
+
+.contact .item + .item {
+  margin-left: 50px;
+}
+
 .contact .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -128,8 +171,13 @@ ul {
 /* -----Герой------ */
 
 .hero-section {
-  padding: 200px 0;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
 
+  /* position: absolute; */
+  width: 1600px;
   text-align: center;
   background-color: var(--background-color);
 }
@@ -170,6 +218,22 @@ ul {
 }
 /* -----Особливості----- */
 
+/* .feature-item + .feature-item {
+  margin-left: 30px;
+} */
+
+.section.nopadding {
+  padding-bottom: 0;
+}
+
+.feature-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.feature-list {
+  display: flex;
+}
+
 .feature-title {
   margin-bottom: 10px;
 
@@ -202,14 +266,30 @@ ul {
   color: var(--primary-text-color);
 }
 
+.work-list {
+  display: flex;
+}
+
+.work-item {
+  width: calc((100% - 60px) / 3);
+}
+
+.work-item + .work-item {
+  margin-left: 30px;
+}
+
 /* -----Наша команда----- */
 
 .team-section {
   background: var(--light-background-color);
 }
 
+.team-list {
+  display: flex;
+}
+
 .team-item {
-  width: 270px;
+  width: calc((100% - 90px) / 4);
 
   background: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -217,8 +297,16 @@ ul {
   border-radius: 0px 0px 4px 4px;
 }
 
+.team-item + .team-item {
+  margin-left: 30px;
+}
+
+.team-info {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .team-title {
-  margin-top: 30px;
   margin-bottom: 10px;
 
   font-weight: 500;
@@ -231,8 +319,6 @@ ul {
 }
 
 .team-text {
-  padding-bottom: 30px;
-
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -246,13 +332,16 @@ ul {
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 1600px;
 
   background-color: var(--background-color);
 }
 
 .footer-logo.link {
-  margin-bottom: 30px;
-
+  margin-bottom: 20px;
   display: inline-block;
 
   font-family: 'Raleway', sans-serif;
@@ -293,12 +382,32 @@ ul {
 /* ----------Портфолио---------- */
 
 .project-section {
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 1600px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
 }
 
 /* -----Кнопки фильтр----- */
 
+.btn-list {
+  margin-bottom: 50px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.btn-item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .filter-btn {
+  padding: 6px 22px;
+  display: inline-block;
+  min-width: 73px;
+
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -324,11 +433,32 @@ ul {
 
 /* -----Проекты----- */
 
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .project-item {
-  width: 370px;
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.project-item:nth-child(3n) {
+  margin-right: 0px;
+}
+
+.project-item:nth-last-child(-n + 3) {
+  margin-bottom: 0px;
+}
+
+.project-info {
+  padding: 20px 24px;
 }
 
 .project-title {
+  margin-bottom: 4px;
+
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
