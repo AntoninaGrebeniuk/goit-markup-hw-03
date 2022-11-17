@@ -281,6 +281,9 @@ img {
 /* -----Наша команда----- */
 
 .team-section {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1600px;
   background: var(--light-background-color);
 }
 
