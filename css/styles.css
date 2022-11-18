@@ -450,8 +450,6 @@ img {
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
-
-  border-bottom: 1px solid #eeeeee;
 }
 
 .project-item:nth-child(3n) {
@@ -464,6 +462,10 @@ img {
 
 .project-info {
   padding: 20px 24px;
+
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .project-title {
