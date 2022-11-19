@@ -9,6 +9,7 @@
   --background-color: #2f303a;
   --light-background-color: #f5f4fa;
   --header-border: #ececec;
+  --card-gap: 30px;
 }
 
 body {
@@ -276,11 +277,11 @@ img {
 }
 
 .work-item {
-  width: calc((100% - 60px) / 3);
+  flex-basis: calc((100% - 60px) / 3);
 }
 
 .work-item + .work-item {
-  margin-left: 30px;
+  margin-left: var(--card-gap);
 }
 
 /* -----Наша команда----- */
@@ -297,7 +298,7 @@ img {
 }
 
 .team-item {
-  width: calc((100% - 90px) / 4);
+  flex-basis: calc((100% - 90px) / 4);
 
   background: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -306,7 +307,7 @@ img {
 }
 
 .team-item + .team-item {
-  margin-left: 30px;
+  margin-left: var(--card-gap);
 }
 
 .team-info {
@@ -447,9 +448,9 @@ img {
 }
 
 .project-item {
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
+  flex-basis: calc((100% - 60px) / 3);
+  margin-right: var(--card-gap);
+  margin-bottom: var(--card-gap);
 }
 
 .project-item:nth-child(3n) {
